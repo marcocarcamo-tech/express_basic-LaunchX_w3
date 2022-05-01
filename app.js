@@ -3,13 +3,18 @@ const express = require('express');
 const app = express();
 
 const port = 3000
-//Home route
+//Routes
+
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
-//launchx route
+
 app.get('/launchx', (req, res)=>{
   res.send('Welcome to LaunchX')
+})
+app.get('/explorersInNode', (req, res)=>{
+  const explorer = {name: "Explorer", msg: "Hello"}
+  res.send(explorer)
 })
 
 //Initialize app
